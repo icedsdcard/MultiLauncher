@@ -16,7 +16,7 @@ I don't know if it works in 1.5.
 I probably won't be using 1.5 for a long time.
  - Yayo's Combat ammo?
 
-Weapon tags for ammo are included and have been tested with Yayo's Combat 3 (Continued).
+Weapon tags for ammo are included and have been tested with "Yayo's Combat 3 (Continued)".
 
 Industrial fire ammo for the launcher and flaregun, spacer fire ammo for the charged launcher.
 
