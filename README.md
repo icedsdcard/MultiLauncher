@@ -28,3 +28,7 @@ Not much point to it.
 Use "Combat Extended Guns", "Ammo Variety - Grenade Launchers", and "Launchers Tweak".
 
 I think knockout gas grenades are still missing? But mine are slapdash anyway.
+ - Steam Workshop?
+
+I don't plan to put it up.
+You can upload it, as long as you include a link back to the Github page.
