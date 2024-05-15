@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <MVCF.ModDef>
+        <defName>Eccentric_MultiFlareGun</defName>
+        <label>Multi Flare Gun</label>
+        <description>multi flare gun</description>
+        <ActivateFeatures>
+            <li>ExtraEquipmentVerbs</li>
+            <li>VerbComps</li>
+        </ActivateFeatures>
+    </MVCF.ModDef>
+</Defs>
