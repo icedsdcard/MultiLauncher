@@ -7,7 +7,7 @@ FAQ:
 
 No. Each fire mode is as good as or a bit better than a vanilla equivalent, and you get all of them in one, plus more, over walls.
 
-But it's not quite "Glitter Tech", "Science Never Stops", or "Kraltech Industries".
+But it's not "Glitter Tech", "Science Never Stops", or "Kraltech Industries".
 
  - 1.5?
 
