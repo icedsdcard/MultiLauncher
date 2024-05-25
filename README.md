@@ -9,11 +9,6 @@ No. Each fire mode is as good as or a bit better than a vanilla equivalent, and 
 
 But it's not "Glitter Tech", "Science Never Stops", or "Kraltech Industries".
 
- - 1.5?
-
-I don't know if it works in 1.5.
-
-I probably won't be using 1.5 for a long time.
  - Yayo's Combat ammo?
 
 Weapon tags for ammo are included and have been tested with "Yayo's Combat 3 (Continued)".
