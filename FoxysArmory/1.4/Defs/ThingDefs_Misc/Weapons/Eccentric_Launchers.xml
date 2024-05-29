@@ -504,9 +504,11 @@ Things/Eccentric/Ammo/CGL/Smoke/Smoke_c
     <projectile>
       <speed>80</speed>
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>30</damageAmountBase>
-	  <armorPenetrationBase>0.45</armorPenetrationBase>
-      <explosionRadius>2.9</explosionRadius>
+      <damageAmountBase>45</damageAmountBase>
+	  <armorPenetrationBase>0.3</armorPenetrationBase>
+	  <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
+	  <buildingDamageFactorPassable>1.5</buildingDamageFactorPassable>
+      <explosionRadius>3.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 	  <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -552,7 +554,7 @@ Things/Eccentric/Ammo/CGL/Smoke/Smoke_c
     <projectile>
       <speed>80</speed>
       <damageDef>Thump</damageDef>
-      <damageAmountBase>15</damageAmountBase>
+      <damageAmountBase>35</damageAmountBase>
       <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
