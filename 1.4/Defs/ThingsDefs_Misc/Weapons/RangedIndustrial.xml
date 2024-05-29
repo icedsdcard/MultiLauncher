@@ -487,9 +487,11 @@
     <projectile>
       <speed>40</speed>
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>20</damageAmountBase>
-	  <armorPenetrationBase>0.3</armorPenetrationBase>
-      <explosionRadius>1.9</explosionRadius>
+      <damageAmountBase>30</damageAmountBase>
+	  <armorPenetrationBase>0.15</armorPenetrationBase>
+	  <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
+	  <buildingDamageFactorPassable>1.5</buildingDamageFactorPassable>
+      <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
 	  <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -535,7 +537,7 @@
     <projectile>
       <speed>40</speed>
       <damageDef>Thump</damageDef>
-      <damageAmountBase>10</damageAmountBase>
+      <damageAmountBase>25</damageAmountBase>
       <explosionRadius>1.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
