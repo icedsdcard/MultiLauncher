@@ -27,3 +27,13 @@ I think knockout gas grenades are still missing? But mine are slapdash anyway.
 
 I don't plan to put it up.
 You can upload it, as long as you include a link back to the Github page.
+
+ - Damage types?
+HEAT damages only the tile it hits, but has very high armor penetration.
+Thump damage is very strong against buildings and walls.
+Anesthetic does very small damage, and adds some anesthetic. Should be affected by toxic environment resistance.
+Stun, stuns.
+Incendiary, EMP, Tox, Firefoam, and Smoke are like the vanilla equivalent, stats are the same or better.
+The charged launcher (Foxy's Armory) has higher damage, higher explosion radius, and lower miss radius.
+Explosive does high damage over a wide area, but has little armor penetration, and reduced damage against buildings.
+ - (Fragmentation is a better description, but the name remains for backwards compatibility.)
