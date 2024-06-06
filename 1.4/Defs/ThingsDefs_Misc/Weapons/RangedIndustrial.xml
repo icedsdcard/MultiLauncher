@@ -488,9 +488,11 @@
       <speed>40</speed>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>30</damageAmountBase>
-	  <armorPenetrationBase>0.15</armorPenetrationBase>
-	  <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
-	  <buildingDamageFactorPassable>1.5</buildingDamageFactorPassable>
+	  <armorPenetrationBase>0.1</armorPenetrationBase>
+	  <buildingDamageFactorImpassable>0.75</buildingDamageFactorImpassable>
+	  <buildingDamageFactorPassable>0.5</buildingDamageFactorPassable>
+	  <plantDamageFactor>0.5</plantDamageFactor>
+	  <corpseDamageFactor>0.25</corpseDamageFactor>
       <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
