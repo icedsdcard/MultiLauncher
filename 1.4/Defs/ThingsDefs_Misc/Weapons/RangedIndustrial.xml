@@ -662,6 +662,7 @@
       <speed>40</speed>
       <damageDef>StunAnesthetic</damageDef>
       <damageAmountBase>1</damageAmountBase>
+	    <armorPenetrationBase>0.6</armorPenetrationBase>
       <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
