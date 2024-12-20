@@ -3,6 +3,9 @@ RimWorld mod for a multi-function grenade launcher that fires over walls.
 Requires Vanilla Expanded Framework.
 Extra launchers if "Eccentric Extras - Flares" and/or "Eccentric Tech - Foxy's Armory" are loaded.
 FAQ:
+ - Compatibility?
+Seems to conflict with Mortar Accuracy, but I haven't tested in a minimal setup. Over-Wall Grenades has the same issue with Mortar Accuracy.
+
  - Balanced?
 
 No. Each fire mode is as good as or a bit better than a vanilla equivalent, and you get all of them in one, plus more, over walls.
