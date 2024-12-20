@@ -679,6 +679,7 @@ Things/Eccentric/Ammo/CGL/Smoke/Smoke_c
       <speed>80</speed>
       <damageDef>StunAnesthetic</damageDef>
       <damageAmountBase>2</damageAmountBase>
+	    <armorPenetrationBase>0.9</armorPenetrationBase>
       <explosionRadius>3.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
