@@ -4,6 +4,7 @@ Requires Vanilla Expanded Framework.
 Extra launchers if "Eccentric Extras - Flares" and/or "Eccentric Tech - Foxy's Armory" are loaded.
 FAQ:
  - Compatibility?
+
 Seems to conflict with Mortar Accuracy, but I haven't tested in a minimal setup. Over-Wall Grenades has the same issue with Mortar Accuracy.
 
  - Balanced?
