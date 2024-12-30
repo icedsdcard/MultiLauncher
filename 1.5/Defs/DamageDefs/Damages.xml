@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef Name="StunBaseSpecialTwo" Abstract="True">
+    <label>stun</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>1</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>2</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>1</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>1</buildingDamageFactorPassable>
+    <plantDamageFactor>1</plantDamageFactor>
+    <corpseDamageFactor>0.1</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+
+
+<!-->
+  <DamageDef Name="StunBaseSpecialTwo" Abstract="True">
+    <makesBlood>false</makesBlood>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stunned to death.</deathMessage>
+    <defaultDamage>1</defaultDamage>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <combatLogRules>Damage_Stun</combatLogRules>
+  </DamageDef>
+<-->
+
+  <DamageDef ParentName="StunBaseSpecialTwo">
+    <defName>StunAnesthetic</defName>
+    <label>anesthetic stun</label>
+    <deathMessage>{0} has been anesthetized to death.</deathMessage>
+    <defaultDamage>2</defaultDamage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <defaultArmorPenetration>2</defaultArmorPenetration>
+    <additionalHediffs>
+      <li>
+        <hediff>Anesthetic</hediff>
+        <severityPerDamageDealt>0.35</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicEnvironmentResistance</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <soundExplosion>Explosion_Smoke</soundExplosion>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+  </DamageDef>
+
+<!-->
+
+  <DamageDef ParentName="StunBaseSpecialTwo">
+    <defName>StunPsychic</defName>
+    <label>psychic stun</label>
+    <additionalHediffs>
+      <li>
+        <hediff>PsychicEntropy</hediff>
+        <severityPerDamageDealt>0.7</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+      <li>
+        <hediff>PsychicVertigo</hediff>
+        <severityPerDamageDealt>0.7</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>false</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+      <li>
+        <hediff>PsychicBurden</hediff>
+        <severityPerDamageDealt>0.7</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>false</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+      <li>
+        <hediff>PsychicBlindness</hediff>
+        <severityPerDamageDealt>0.7</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>false</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+      <li>
+        <hediff>Joyfuzz</hediff>
+        <severityPerDamageDealt>0.25</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>false</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+  </DamageDef>
+
+<-->  
+
+<!-->
+  <DamageDef ParentName="Stun">
+    <defName>StunPsychicShock</defName>
+    <label>psychic bomb</label>
+    <additionalHediffs>
+      <li>
+        <hediff>PsychicShock</hediff>
+        <severityPerDamageDealt>0.2</severityPerDamageDealt>
+        <victimSeverityScaling>PsychicSensitivity</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <impactSoundType>Bomb</impactSoundType>
+  </DamageDef>
+<-->
+
+
+  <DamageDef ParentName="Bomb">
+    <defName>ExplosiveFrag</defName>
+    <label>frag</label>
+    <deathMessage>{0} has been fragged to death.</deathMessage>
+    <defaultDamage>30</defaultDamage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <defaultArmorPenetration>0.2</defaultArmorPenetration>
+    <soundExplosion>Explosion_Smoke</soundExplosion>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <buildingDamageFactorImpassable>0.5</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>0.25</buildingDamageFactorPassable>
+    <plantDamageFactor>0.25</plantDamageFactor>
+    <corpseDamageFactor>0.25</corpseDamageFactor>
+  </DamageDef>
+
+
+</Defs>
