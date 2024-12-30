@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseEccentricGun">
+    <defName>Eccentric_Gun_MultiChargeLauncher</defName>
+    <label>multi charge launcher</label>
+    <description>This modification of the CGL1 fires more types of charged grenades.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Eccentric_Gun_M1CGL</ThingDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Eccentric/Weapons/CGL1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+	<generateCommonality>0.0</generateCommonality>
+	<techLevel>Spacer</techLevel>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags Inherit="False">
+      <li>EccentricGun</li>
+      <li>EccentricLauncher</li>
+	  <li MayRequire="mlie.yayoscombat3">ammo_spacer_fire/24/1</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>75000</WorkToMake>
+      <Mass>5.0</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <Plasteel>80</Plasteel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Eccentric_HexCell>2</Eccentric_HexCell>
+    </costList>
+
+    <recipeMaker>
+      <researchPrerequisite>Eccentric_ChargedLaunchers</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>EccentricNanoassembler</li>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+
+    <verbs>
+<!-->Verbs Start<-->
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Slug charge shot</label>
+        <defaultProjectile>Bullet_MultiChargeBoltSlug</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+        <burstShotCount>1</burstShotCount>
+        <accuracyTouch>0.97</accuracyTouch>
+        <accuracyShort>0.95</accuracyShort>
+        <accuracyMedium>0.9</accuracyMedium>
+        <accuracyLong>0.85</accuracyLong>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>HEAT charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltHEAT</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.1</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Frag charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltFrag</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Incendiary charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltIncendiary</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Thump charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltThump</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Firefoam charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltFoam</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Smoke charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltSmoke</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>EMP charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltEMP</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li  MayRequire="Ludeon.RimWorld.Biotech">
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Tox charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltToxbomb</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Anesthetic charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltAnesthetic</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+<!-->
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Psychic Disruptor charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltStunPsychic</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+<-->
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Stun charge grenade</label>
+        <defaultProjectile>Bullet_MultiChargeBoltStun</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+		<forcedMissRadius>0.9</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+      </li>
+
+
+
+
+<!-->Verbs End<-->
+
+    </verbs>
+
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+
+    <comps>
+
+<!-->Comps Start<-->
+
+      <li Class="MVCF.Comps.CompProperties_VerbProps">
+        <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+
+        <verbProps>
+
+<!-->
+Things/Eccentric/Ammo/CGL/HE/HE_c
+Things/Eccentric/Ammo/CGL/EMP/EMP_c
+Things/Eccentric/Ammo/CGL/Smoke/Smoke_c
+<-->
+
+
+							<!-->verbProps Start<-->
+
+          <li>
+            <label>Slug charge shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeSlug</switchIcon>
+                <startEnabled>true</startEnabled>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>HEAT charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeHEAT</switchIcon>
+              </li>
+			</comps>
+          </li>
+
+          <li>
+            <label>Frag charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeFrag</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Incendiary charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeIncendiary</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Thump charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeThump</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Firefoam charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeFirefoam</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Smoke charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeSmoke</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>EMP charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeEMP</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li  MayRequire="Ludeon.RimWorld.Biotech">
+            <label>Tox charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeTox</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Anesthetic charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeAnesthetic</switchIcon>
+              </li>
+            </comps>
+          </li>
+<!-->
+          <li>
+            <label>Psychic Disruptor charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargePsychicDisruptor</switchIcon>
+              </li>
+            </comps>
+          </li>
+<-->
+
+          <li>
+            <label>Stun charge grenade</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>UI/Charge/MultiLauncherMode_ChargeStun</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+<!-->verbProps End<-->
+
+        </verbProps>
+
+      </li>
+
+<!-->Comps End<-->
+
+    </comps>
+
+</ThingDef>
+
+<!--> Projectiles Start <-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltSlug</defName>
+    <label>multi slug charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+	  <armorPenetrationBase>0.9</armorPenetrationBase>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltHEAT</defName>
+    <label>multi heat charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(180,180,60)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+	  <armorPenetrationBase>1.6</armorPenetrationBase>
+      <explosionRadius>1.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltFrag</defName>
+    <label>multi frag charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(180,180,60)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>ExplosiveFrag</damageDef>
+      <damageAmountBase>45</damageAmountBase>
+	  <armorPenetrationBase>0.2</armorPenetrationBase>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltIncendiary</defName>
+    <label>multi incendiary charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(180,180,60)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Flame</damageDef>
+      <explosionRadius>2.9</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.4</preExplosionSpawnChance>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltThump</defName>
+    <label>multi thump charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(180,180,60)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Thump</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <explosionRadius>2.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltFoam</defName>
+    <label>multi foam charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(140,135,156)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Extinguish</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.9</explosionRadius>
+      <postExplosionGasType>BlindSmoke</postExplosionGasType>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+      <screenShakeFactor>0.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltSmoke</defName>
+    <label>multi smoke charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(140,135,156)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Smoke</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.9</explosionRadius>
+      <postExplosionGasType>BlindSmoke</postExplosionGasType>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+      <screenShakeFactor>0.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltEMP</defName>
+    <label>multi EMP charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>EMP</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef  MayRequire="Ludeon.RimWorld.Biotech" ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltToxbomb</defName>
+    <label>multi tox charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(140,135,156)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>ToxGas</damageDef>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <explosionRadiusDisplayPadding>2</explosionRadiusDisplayPadding>
+      <postExplosionGasType>ToxGas</postExplosionGasType>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+      <screenShakeFactor>0.5</screenShakeFactor>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltAnesthetic</defName>
+    <label>multi anesthetic charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(50,190,90)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>StunAnesthetic</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+	    <armorPenetrationBase>0.9</armorPenetrationBase>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+<!-->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltStunPsychic</defName>
+    <label>multi psychic charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(50,190,90)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>StunPsychic</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+<!-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_MultiChargeBoltStun</defName>
+    <label>multi stun charge bolt</label>
+    <graphicData>
+      <texPath>Things/Eccentric/Projectile/CGL1Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(50,190,90)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>80</speed>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.5</shadowSize>
+    </projectile>
+  </ThingDef>
+
+<!--> Projectiles End <-->
+
+</Defs>
