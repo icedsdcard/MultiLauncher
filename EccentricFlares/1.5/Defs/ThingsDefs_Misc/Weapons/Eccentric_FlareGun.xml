@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Eccentric_MultiFlareGun</defName>
+    <label>multi flare gun</label>
+    <description>A multi flare gun that fires illumination flares and chemlights.</description>
+    <graphicData>
+      <texPath>Eccentric/Things/FlareGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+	<generateCommonality>0.0</generateCommonality>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1.0</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags Inherit="False">
+      <li>EccentricFlare</li>
+	  <li MayRequire="mlie.yayoscombat3">ammo_industrial_fire/48/1</li>
+    </weaponTags>
+    <costList>
+      <Steel>20</Steel>
+      <Chemfuel>40</Chemfuel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+
+
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Flare shot</label>
+        <defaultProjectile>Proj_MultiEccentricFlare</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Red chemlight shot</label>
+        <defaultProjectile>Proj_MultiEccentricChemlightRed</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Green chemlight shot</label>
+        <defaultProjectile>Proj_MultiEccentricChemlightGreen</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Blue chemlight shot</label>
+        <defaultProjectile>Proj_MultiEccentricChemlightBlue</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Yellow chemlight shot</label>
+        <defaultProjectile>Proj_MultiEccentricChemlightYellow</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+      <li  MayRequire="Ludeon.RimWorld.Ideology">
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<label>Darklight chemlight shot</label>
+        <defaultProjectile>Proj_MultiEccentricChemlightDarklight</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>33.9</range>
+        <forcedMissRadius>0.1</forcedMissRadius>
+        <soundCast>Eccentric_FlareGunFire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+		<requireLineOfSight>false</requireLineOfSight>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </verbs>
+
+
+    <comps>
+      <li Class="MVCF.Comps.CompProperties_VerbProps">
+        <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+
+
+
+
+        <verbProps>
+
+          <li>
+            <label>Flare shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/RoadFlare</switchIcon>
+                <startEnabled>true</startEnabled>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Red chemlight shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/Chemlight_Red</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Green chemlight shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/Chemlight_Green</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Blue chemlight shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/Chemlight_Blue</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li>
+            <label>Yellow chemlight shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/Chemlight_Yellow</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+          <li MayRequire="Ludeon.RimWorld.Ideology">
+            <label>Darklight chemlight shot</label>
+            <canBeToggled>false</canBeToggled>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Switch">
+                <switchIcon>Eccentric/Things/Chemlight_Darklight</switchIcon>
+              </li>
+            </comps>
+          </li>
+
+        </verbProps>
+      </li>
+	 </comps>
+
+
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+
+
+
+  <!-- Projectiles -->
+
+
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MultiEccentricFlare</defName>
+    <label>flare</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/RoadFlare</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <soundExplode>Eccentric_FlareHit</soundExplode>
+      <preExplosionSpawnThingDef>EccentricBurningFlare</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MultiEccentricChemlightRed</defName>
+    <label>chemlight</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Chemlight_Red</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <soundExplode>Interact_BeatFire</soundExplode>
+      <preExplosionSpawnThingDef>EccentricGlowingChemlightRed</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MultiEccentricChemlightGreen</defName>
+    <label>chemlight</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Chemlight_Green</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <soundExplode>Interact_BeatFire</soundExplode>
+      <preExplosionSpawnThingDef>EccentricGlowingChemlightGreen</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MultiEccentricChemlightBlue</defName>
+    <label>chemlight</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Chemlight_Blue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <soundExplode>Interact_BeatFire</soundExplode>
+      <preExplosionSpawnThingDef>EccentricGlowingChemlightBlue</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MultiEccentricChemlightYellow</defName>
+    <label>chemlight</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Chemlight_Yellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <soundExplode>Interact_BeatFire</soundExplode>
+      <preExplosionSpawnThingDef>EccentricGlowingChemlightYellow</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeProjectile" MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>Proj_MultiEccentricChemlightDarklight</defName>
+    <label>chemlight</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Eccentric/Things/Chemlight_Darklight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <explosionDelay>0</explosionDelay>
+      <speed>12</speed>
+      <flyOverhead>true</flyOverhead>
+	  <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+	  <shadowSize>0.5</shadowSize>
+      <soundExplode>Interact_BeatFire</soundExplode>
+      <preExplosionSpawnThingDef>EccentricGlowingChemlightDarklight</preExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Defs>
