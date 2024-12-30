@@ -46,9 +46,9 @@ Slug is just a solid bullet, to limit collateral damage. Standard bullet accurac
 
 HEAT only damages one tile, and is not a guaranteed hit. Lots of damage and armor penetration.
 
-Explosive has weak armor penetration, but a wide damage radius. (Unsure if changing the name to Fragmentation would break saves.)
+Frag has weak armor penetration, but a wide damage radius.
 
-Thump has high building damage. Less pawn damage than Explosive, and smaller radius, but higher armor penetration.
+Thump has high building damage. Less pawn damage than Frag, and smaller radius, but higher armor penetration.
 
 Anesthetic applies the anesthetic hediff while doing minimal damage. Same armor penetration as a slug shot, but hediff buildup is reduced by toxic environment resistance.
 
